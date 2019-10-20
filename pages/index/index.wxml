@@ -1,0 +1,7 @@
+<view>
+    <view>{{ message }}</view>
+    <view>当前播放时长(模拟器可能异常但手机没问题): {{ time }}</view>
+    <button type = "primary" bind:tap = "mediaPlay">开始播放</button>
+    <button type = "primary" bind:tap = "mediaPause">暂停播放</button>
+    <button type = "primary" bind:tap = "seekProgress">点我跳转进度</button>
+</view>

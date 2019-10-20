@@ -1,0 +1,9 @@
+view{
+    padding: 30rpx 0;
+    font-size: 38rpx;
+    text-align: center;
+    font-weight: bold;
+}
+button{
+    margin: 30rpx 0;
+}
