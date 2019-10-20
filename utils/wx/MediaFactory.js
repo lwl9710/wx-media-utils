@@ -40,7 +40,7 @@ function initMediaManager(options){
     options.mediaProxy.mediaManager.onError(err=> console.error(err));
     options.mediaProxy.mediaManager.src = options.src;
     options.mediaProxy.src = options.src;
-    if(options.bool)options.mediaProxy.title = options.title;
+    if(options.bool)options.mediaProxy.title = options.title || options.src;
 }
 
 exports.build = function(options = {global: false,duration: -1,autoStop: true}){
