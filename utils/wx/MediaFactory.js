@@ -35,12 +35,12 @@
 
 /* 初始化函数 */
 function initMediaManager(options){
-    if (options.bool) options.mediaProxy.mediaManager = wx.getBackgroundmediaManager();
+    if (options.global) options.mediaProxy.mediaManager = wx.getBackgroundAudioManager();
     else options.mediaProxy.mediaManager = wx.createInnerAudioContext();
     options.mediaProxy.mediaManager.onError(err=> console.error(err));
     options.mediaProxy.mediaManager.src = options.src;
     options.mediaProxy.src = options.src;
-    if(options.bool)options.mediaProxy.title = options.title || options.src;
+    if(options.global)options.mediaProxy.mediaManager.title = options.title || options.src;
 }
 
 exports.build = function(options = {global: false,duration: -1,autoStop: true}){
